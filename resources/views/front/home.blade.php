@@ -22,16 +22,19 @@
                 <div class="media">
                     <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{ asset($posts->image)}}" alt="{{ $posts->title_en }}">
                     <div class="media-body">
-                        <h3 class="title mb-1"><a href="blog-post.html">{{ $posts->title_en }}</a></h3>
-                        <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">8 comments</a></span></div>
+                        <h3 class="title mb-1"><a href="{{ route('post.detail', $posts->id) }}">{{ $posts->title_en }}</a></h3>
+                        <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="{{ $posts->title_en }}">8 comments</a></span></div>
                         <div class="intro">{!! $posts->body_en !!}</div>
-                        <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+                        <a class="more-link" href="{{ route('post.detail', $posts->id) }}">Read more &rarr;</a>
                     </div>
                 </div>
             </div>
         @endforeach
+        <div>
+            <div class="pagination-control">{{ $post->links() }}</div>
+        </div>
         
-        <div class="item">
+        <!-- <div class="item">
             <div class="media">
                 <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{ asset('assets/images/blog/blog-post-thumb-6.jpg')}}" alt="image">
                 <div class="media-body">
@@ -41,7 +44,7 @@
                     <a class="more-link" href="blog-post.html">Read more &rarr;</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <nav class="blog-nav nav nav-justified my-5">
             <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>

@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'Home' => 'Home',
-    'Post' => 'Post',
-    'About' => 'About',
-
+    'Home' => 'ផ្ទះ',
+    'Post' => 'ការបង្រៀន',
+    'About' => 'អំពី',
 ];

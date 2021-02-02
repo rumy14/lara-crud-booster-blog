@@ -12,3 +12,10 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home.index');
+
+Route::get('/post/{id}', 'HomeController@postDetails')->name('post.detail');
+
+Route::get('locale/{locale}', function($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
+});

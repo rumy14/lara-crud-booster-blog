@@ -39,13 +39,21 @@
 				</div>
 				<ul class="navbar-nav flex-column text-left">
 					<li class="nav-item active">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>{{ __('auth.Home') }} <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>{{ __('auth.Post') }}</a>
 					</li>
 					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>{{ __('auth.About') }}</a>
+					</li>
+
+					<li class="nav-item">
+					    <a class="nav-link" href="{{ url('locale/kh') }}"><i class="fas fa-user fa-fw mr-2"></i>Khmer</a>
+					</li>
+
+					<li class="nav-item">
+					    <a class="nav-link" href="{{ url('locale/en') }}"><i class="fas fa-user fa-fw mr-2"></i>English</a>
 					</li>
 				</ul>
 				
